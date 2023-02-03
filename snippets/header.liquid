@@ -1,13 +1,19 @@
 <header>
-  <div class="header-title">
-    <h1>{{ shop.name }}</h1>
-  </div>
-  <div class="header-nav">
-    <ul class="header-ul">
+  <nav class="nav hidden">
+    <ul class="nav-ul">
       {% for link in linklists.main-menu.links -%}
         {{ link.title | link_to: link.url }}
       {%- endfor %}
     </ul>
+  </nav>
+  <div class="hamburger-icon">
+    <button>
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div class="header-nav"></div>
+  <div class="header-title">
+    <h1>{{ shop.name }}</h1>
   </div>
 
   {% if settings.show_search %}
