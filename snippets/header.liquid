@@ -1,8 +1,22 @@
 <header>
-  <h1>{{ shop.name }}</h1>
-  <ul>
-    {% for link in linklists.main-menu.links -%}
-    {{ link.title | link_to: link.url }}
-    {%- endfor %}
-  </ul>
+  <div class="header-title">
+    <h1>{{ shop.name }}</h1>
+  </div>
+  <div class="header-nav">
+    <ul class="header-ul">
+      {% for link in linklists.main-menu.links -%}
+        {{ link.title | link_to: link.url }}
+      {%- endfor %}
+    </ul>
+  </div>
+
+  {% if settings.show_search %}
+    <form class="search-form" action="/search">
+      <input
+        class="search-input"
+        type="search"
+        name="q">
+      <button class="search-button" type="submit">Search</button>
+    </form>
+  {% endif %}
 </header>

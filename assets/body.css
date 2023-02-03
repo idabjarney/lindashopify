@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
+header {
+  display: flex;
+  background-color: #e9e5db;
+  position: sticky;
+  top: 0; }
+  header .header-title h1 {
+    font-family: 'Noto Sans Symbols 2', sans-serif;
+    color: #383737; }
+  header .header-nav .header-ul a {
+    text-decoration: none;
+    color: #616161; }
+
+footer {
+  margin-top: auto; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #c0b5a5; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }

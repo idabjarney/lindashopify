@@ -1,0 +1,9 @@
+<footer>
+  <div class="footer-nav">
+    <ul class="footer-ul">
+      {% for link in linklists.footer.links -%}
+        {{ link.title | link_to: link.url }}
+      {%- endfor %}
+    </ul>
+  </div>
+</footer>

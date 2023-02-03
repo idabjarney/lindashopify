@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
+
+header {
+  display: flex;
+  background-color: rgb(233, 229, 219);
+  position: sticky;
+  top: 0;
+  .header-title {
+    h1 {
+      font-family: 'Noto Sans Symbols 2', sans-serif;
+      color: #383737;
+    }
+
+  }
+
+  .header-nav {
+    .header-ul {
+      a {
+        text-decoration: none;
+        color: #616161;
+        
+      }
+    }
+  }
+}
