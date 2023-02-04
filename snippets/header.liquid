@@ -1,13 +1,18 @@
 <header>
-  <nav class="nav hidden">
-    <ul class="nav-ul">
-      {% for link in linklists.main-menu.links -%}
-        {{ link.title | link_to: link.url }}
-      {%- endfor %}
-    </ul>
-  </nav>
+  <div class="nav-wrapper hidden">
+    <nav>
+      <button class="close-btn">
+        <i class="fa fa-close"></i>
+      </button>
+      <ul class="nav-ul">
+        {% for link in linklists.main-menu.links -%}
+          {{ link.title | link_to: link.url }}
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
   <div class="hamburger-icon">
-    <button>
+    <button class="hamburger-btn">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
@@ -26,3 +31,5 @@
     </form>
   {% endif %}
 </header>
+
+<script src="../assets/header.js"></script>

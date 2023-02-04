@@ -15,23 +15,35 @@ header {
     color: #383737; }
     header .hamburger-icon button:hover {
       background-color: #d3cfc5; }
-  header nav {
-    left: 0;
+  header .nav-wrapper {
+    height: 100%;
+    width: 100%;
+    position: fixed;
     top: 0;
-    position: absolute;
-    width: 200px;
-    height: 100vh;
-    background-color: #d3cfc5;
-    outline: solid red;
-    transition: 500ms; }
-    header nav .nav-ul {
-      display: flex;
-      flex-direction: column; }
-      header nav .nav-ul a {
-        text-decoration: none;
-        color: #616161; }
-    header nav .hidden {
-      transform: translateX(-100%); }
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.403);
+    transition: 400ms;
+    cursor: pointer; }
+    header .nav-wrapper nav {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 270px;
+      height: 100vh;
+      background-color: #d3cfc5;
+      transition: 500ms;
+      cursor: auto; }
+      header .nav-wrapper nav .nav-ul {
+        display: flex;
+        flex-direction: column; }
+        header .nav-wrapper nav .nav-ul a {
+          text-decoration: none;
+          color: #616161; }
+    header .nav-wrapper.hidden {
+      pointer-events: none;
+      background-color: rgba(0, 0, 0, 0); }
+      header .nav-wrapper.hidden nav {
+        transform: translateX(-100%); }
   header .header-title h1 {
     font-family: 'Noto Sans Symbols 2', sans-serif;
     color: #383737; }
