@@ -20,10 +20,19 @@
       margin: 0 20px;
       background-color: transparent;
       border: none;
-      height: 35px;
-      width: 35px;
+      height: 60px;
+      width: 60px;
+      font-size: 45px;
+      color: rgba(255, 255, 255, 0.397);
+      text-shadow: 0px 4px 5px #00000081;
+      transition: 300ms;
 
-      svg {
+      &:active, &:hover {
+        color: rgba(255, 255, 255, 0.658);
+        text-shadow: 0px 4px 5px #000000ab;
+        transform: scale(1.3);
+      }
+      i {
         width: 100%;
       }
     }
@@ -33,6 +42,8 @@
     display: flex;
     justify-content: center;
     width: 400%;
+    transition: 1350ms;
+    transition-timing-function: ease;
     .slide {
       display: flex;
       justify-content: space-between;
@@ -54,6 +65,7 @@
     position: absolute;
     width: 100%;
     bottom: 10px;
+    z-index: 50;
     button {
       margin: 0 2px;
       cursor: pointer;
@@ -64,8 +76,8 @@
       border: 1px solid rgb(24, 23, 23);
       transition: 300ms;
 
-      &:active, &:hover {
-        background-color: rgba(255, 255, 255, 0.753);
+      &:active, &:hover, &.active {
+        background-color: rgba(255, 255, 255, 0.61);
       }
     }
   }
