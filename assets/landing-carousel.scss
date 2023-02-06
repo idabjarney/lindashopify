@@ -1,7 +1,72 @@
 .carousel-container {
+  position: relative;
+  background-color: red;
+  // margin: 0 50px;
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+  max-width: 100vw;
   .slide-button-container {
-    .back-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 750px;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 50;
+    button {
+      cursor: pointer;
+      margin: 0 20px;
+      background-color: transparent;
+      border: none;
+      height: 35px;
+      width: 35px;
 
+      svg {
+        width: 100%;
+      }
+    }
+  }
+
+  .slide-img-container {
+    display: flex;
+    justify-content: center;
+    width: 400%;
+    .slide {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 750px;
+      width: 25%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .carousel-control-buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    button {
+      margin: 0 2px;
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      border-radius: 100%;
+      background-color: rgba(255, 255, 255, 0.158);
+      border: 1px solid rgb(24, 23, 23);
+      transition: 300ms;
+
+      &:active, &:hover {
+        background-color: rgba(255, 255, 255, 0.753);
+      }
     }
   }
 }
