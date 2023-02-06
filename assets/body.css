@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
 header {
   display: flex;
-  background-color: #e9e5db;
+  background-color: #cec2af;
   position: sticky;
   top: 0;
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.363); }
   header .hamburger-icon button {
     display: block;
     font-size: 30px;
@@ -30,20 +31,31 @@ header {
       position: absolute;
       width: 270px;
       height: 100vh;
-      background-color: #d3cfc5;
+      background-color: #20201f;
       transition: 500ms;
+      box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.663);
       cursor: auto; }
+      header .nav-wrapper nav .close-btn {
+        border: none;
+        background: none;
+        color: #cab2b2;
+        font-size: 25px;
+        padding: 5px;
+        cursor: pointer; }
+        header .nav-wrapper nav .close-btn:hover {
+          background-color: #242322; }
       header .nav-wrapper nav .nav-ul {
         display: flex;
         flex-direction: column; }
         header .nav-wrapper nav .nav-ul a {
           text-decoration: none;
-          color: #616161; }
+          color: #e4dfd7; }
     header .nav-wrapper.hidden {
       pointer-events: none;
       background-color: rgba(0, 0, 0, 0); }
       header .nav-wrapper.hidden nav {
-        transform: translateX(-100%); }
+        transform: translateX(-100%);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563); }
   header .header-title h1 {
     font-family: 'Noto Sans Symbols 2', sans-serif;
     color: #383737; }
@@ -59,7 +71,7 @@ footer {
   box-sizing: border-box; }
 
 body {
-  background-color: #c0b5a5; }
+  background-color: #c5b8a5; }
 
 .wrapper {
   display: flex;

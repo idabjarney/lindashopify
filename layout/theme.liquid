@@ -8,14 +8,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
   </head>
-  <body>
-    <div class="wrapper">
-      {% render 'header' %}
-      <main>
-        {{ content_for_layout }}
-      </main>
-      {% render 'footer' %}
-    </div>
-    {{ 'body.css' | asset_url | stylesheet_tag }}
-  </body>
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> {% endcomment %}
+    <body>
+      <div class="wrapper">
+        {% render 'header' %}
+        <main>
+          {{ content_for_layout }}
+        </main>
+        {% render 'footer' %}
+      </div>
+      {{ 'body.css' | asset_url | stylesheet_tag }}</body>
+  </head>
 </html>
