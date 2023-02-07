@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
 header {
   display: flex;
-  background-color: #cec2af;
+  background-color: #20201f;
   position: sticky;
   top: 0;
   padding: 10px 15px;
@@ -15,7 +15,7 @@ header {
     background: none;
     cursor: pointer;
     transition: 300ms;
-    color: #383737; }
+    color: #c5b8a5; }
     header .hamburger-icon button:hover {
       background-color: #d3cfc5; }
   header .nav-wrapper {
@@ -60,7 +60,7 @@ header {
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563); }
   header .header-title h1 {
     font-family: 'Noto Sans Symbols 2', sans-serif;
-    color: #383737; }
+    color: #c5b8a5; }
 
 footer {
   margin-top: auto;

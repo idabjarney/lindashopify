@@ -2,7 +2,7 @@
 
 header {
   display: flex;
-  background-color: #cec2af;
+  background-color: #20201f;
   position: sticky;
   top: 0;
   padding: 10px 15px;
@@ -17,7 +17,7 @@ header {
       background: none;
       cursor: pointer;
       transition: 300ms;
-      color: #383737;
+      color: #c5b8a5;
       &:hover {
         background-color: #d3cfc5;
       }
@@ -81,7 +81,7 @@ header {
   .header-title {
     h1 {
       font-family: 'Noto Sans Symbols 2', sans-serif;
-      color: #383737;
+      color: #c5b8a5;
     }
 
   }
