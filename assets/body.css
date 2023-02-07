@@ -4,12 +4,16 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #20201f;
-  position: sticky;
+  position: fixed;
   top: 0;
-  padding: 10px 15px;
+  padding: 0px 15px;
   box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.363);
   width: 100%;
-  z-index: 990; }
+  z-index: 990;
+  height: 115px;
+  transition: 350ms; }
+  header.smaller {
+    height: 70px; }
   header .hamburger-icon {
     display: flex;
     align-items: center;
@@ -183,9 +187,11 @@ footer {
   box-sizing: border-box; }
 
 body {
-  background-color: #c5b8a5; }
+  background-color: #20201f;
+  padding-top: 115px; }
 
 .wrapper {
+  background-color: #c5b8a5;
   display: flex;
   align-items: center;
   flex-direction: column;
