@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Long+Cang&family=Loved+by+the+King&family=Over+the+Rainbow&family=Swanky+and+Moo+Moo&display=swap');
 
 header {
   display: flex;
@@ -12,7 +12,7 @@ header {
   width: 100%;
   z-index: 990;
   height: 115px;
-  transition: 350ms;
+  transition: 500ms;
   &.smaller {
     height: 70px;
   }
@@ -27,14 +27,14 @@ header {
       display: block;
       font-size: 30px;
       border: none;
-      background: none;
+      background: transparent;
       cursor: pointer;
       transition: 300ms;
       color: #c5b8a5;
       transition: 300ms;
       &:hover {
-        transform: scale(1.1);
-        background-color: #2e2d2c;
+        transform: scale(1.2);
+        color: #e0d4c1;
       }
       &:active {
         transform: scale(0.9);
@@ -47,20 +47,20 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.403);
-    transition: 400ms;
     cursor: pointer;
     z-index: 999;
+    pointer-events: none;
+    transition: 400ms;
+    background-color: rgba(0, 0, 0, 0);
     nav {
-      left: 0;
+      transition: 500ms;
+      left: -270px;
       top: 0;
       position: absolute;
       width: 270px;
-      // position: fixed;
       height: 100vh;
       background-color: #20201f;
-      transition: 500ms;
-      box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.663);
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563);
       cursor: auto;
       .close-btn {
         border: none;
@@ -84,37 +84,44 @@ header {
       }
       
     }
-    &.hidden {
-      pointer-events: none;
-      background-color: rgba(0, 0, 0, 0);
+    &.show {
+      background-color: rgba(0, 0, 0, 0.403);
+      pointer-events: all;
+      // display: none;
       nav {
-        transform: translateX(-100%);
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563);
-        
+        transform: translateX(270px);
+        box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.663);
       }
     }
   }
   .header-title {
-    width: 75%;
+    width: 85%;
     display: flex;
     a {
+      display: flex;
       text-decoration: none;
       margin-left: 15%;
       h1 {
-        transform: translateY(4px);
-        font-family: 'Noto Sans Symbols 2', sans-serif;
+        margin-left: 10px;
+        font-size: 42px;
         color: #e2d9ca;
-        &::after {
-          position: absolute;
-          content: '';
-          height: 1px;
-          margin: 0 auto;
-          left: 0;
-          right: 0;
-          width: 100%;
-          background-color: #e2d9ca;
-          bottom: 10px;
-        }
+        font-family: 'Liu Jian Mao Cao', cursive;
+        // font-family: 'Long Cang', cursive;
+        // font-family: 'Swanky and Moo Moo', cursive;
+        // font-family: 'Loved by the King', cursive;
+        // font-family: 'Over the Rainbow', cursive;
+
+        // &::after {
+        //   position: absolute;
+        //   content: '';
+        //   height: 1px;
+        //   margin: 0 auto;
+        //   left: 0;
+        //   right: 0;
+        //   width: 100%;
+        //   background-color: #e2d9ca;
+        //   bottom: 10px;
+        // }
       }
     }
 
@@ -122,16 +129,58 @@ header {
 
   .search-cart-icon-container {
     display: flex;
-    width: 56px;
     justify-content: space-between;
+    width: 100px;
     button {
+      transition: 300ms;
       cursor: pointer;
       background-color: transparent;
       border: none;
       color: #c5b8a5;
-      font-size: 20px;
+      font-size: 30px;
+      &:hover {
+        transform: scale(1.2);
+        color: #e0d4c1;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+
     }
   }
-
+  
+  .search-wrapper, .cart-wrapper {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 999;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 400ms;
+    
+    .search, .cart {
+      transition: 500ms;
+      right: -370px;
+      top: 0;
+      position: absolute;
+      width: 370px;
+      height: 100vh;
+      background-color: #20201f;
+      // transform: translateX(100%);
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563);
+      cursor: auto;
+    }
+    &.show {
+      pointer-events: all;
+      background-color: rgba(0, 0, 0, 0.403);
+      .search, .cart {
+        box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.663);
+        transform: translateX(-370px);
+      }
+    }
+  }
 
 }
