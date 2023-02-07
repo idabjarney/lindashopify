@@ -13,7 +13,8 @@
   </div>
   <div class="hamburger-icon">
     <button class="hamburger-btn">
-      <i class="fa-solid fa-bars"></i>
+      {% comment %} <i class="fa-solid fa-bars"></i> {% endcomment %}
+      <i class="fi-xnluxl-three-bars"></i>
     </button>
   </div>
   <div class="header-nav"></div>
@@ -23,7 +24,15 @@
     </a>
   </div>
 
-  {% if settings.show_search %}
+  <div class="search-cart-icon-container">
+    <button class="search-btn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button class="search-btn">
+      <i class="fa-solid fa-bag-shopping"></i>
+    </button>
+  </div>
+  {% comment %} {% if settings.show_search %}
     <form class="search-form" action="/search">
       <input
         class="search-input"
@@ -31,7 +40,7 @@
         name="q">
       <button class="search-button" type="submit">Search</button>
     </form>
-  {% endif %}
+  {% endif %} {% endcomment %}
 </header>
 
 <script src="../assets/header.js"></script>

@@ -1,23 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
 header {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #20201f;
   position: sticky;
   top: 0;
   padding: 10px 15px;
   box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.363);
   width: 100%;
-  z-index: 999; }
-  header .hamburger-icon button {
-    display: block;
-    font-size: 30px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: 300ms;
-    color: #c5b8a5; }
-    header .hamburger-icon button:hover {
-      background-color: #d3cfc5; }
+  z-index: 990; }
+  header .hamburger-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    header .hamburger-icon button {
+      border-radius: 100%;
+      width: 44px;
+      height: 44px;
+      display: block;
+      font-size: 30px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: 300ms;
+      color: #c5b8a5;
+      transition: 300ms; }
+      header .hamburger-icon button:hover {
+        transform: scale(1.1);
+        background-color: #2e2d2c; }
+      header .hamburger-icon button:active {
+        transform: scale(0.9); }
   header .nav-wrapper {
     height: 100%;
     width: 100%;
@@ -26,7 +39,8 @@ header {
     left: 0;
     background-color: rgba(0, 0, 0, 0.403);
     transition: 400ms;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 999; }
     header .nav-wrapper nav {
       left: 0;
       top: 0;
@@ -58,9 +72,36 @@ header {
       header .nav-wrapper.hidden nav {
         transform: translateX(-100%);
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563); }
-  header .header-title h1 {
-    font-family: 'Noto Sans Symbols 2', sans-serif;
-    color: #c5b8a5; }
+  header .header-title {
+    width: 75%;
+    display: flex; }
+    header .header-title a {
+      text-decoration: none;
+      margin-left: 15%; }
+      header .header-title a h1 {
+        transform: translateY(4px);
+        font-family: 'Noto Sans Symbols 2', sans-serif;
+        color: #e2d9ca; }
+        header .header-title a h1::after {
+          position: absolute;
+          content: '';
+          height: 1px;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          width: 100%;
+          background-color: #e2d9ca;
+          bottom: 10px; }
+  header .search-cart-icon-container {
+    display: flex;
+    width: 56px;
+    justify-content: space-between; }
+    header .search-cart-icon-container button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #c5b8a5;
+      font-size: 20px; }
 
 footer {
   margin-top: auto;
