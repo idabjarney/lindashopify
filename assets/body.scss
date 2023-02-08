@@ -6,11 +6,14 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background-color: #c5b8a5;
+  background-color: #20201f;
+  padding-top: 115px;
 }
 
 .wrapper {
+  background-color: #c5b8a5;
   display: flex;
   align-items: center;
   flex-direction: column;
