@@ -105,7 +105,9 @@
       <button class="search-close-btn">
         <i class="fa fa-close"></i>
       </button>
-        {% if settings.show_search %}
+      {% render 'live-search-form' %}
+
+        {% comment %} {% if settings.show_search %}
           <form class="search-form" action="/search">
             <input
               class="search-input"
@@ -133,9 +135,9 @@
           </p>
         {% endfor %}
     
-      {% else %}
+       {% else %}
         <h1>Try searching for something</h1>
-      {% endif %}
+      {% endif %} {% endcomment %}
     </div>
   </div>
   <div class="cart-wrapper">

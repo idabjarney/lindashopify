@@ -12,7 +12,9 @@
     {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> {% endcomment %}
     <body>
       <div class="wrapper">
-        {% render 'header' %}
+        {% unless page.handle == "super-secret-title" %}
+          {% render 'header' %}
+        {% endunless %}
         <main>
           {{ content_for_layout }}
         </main>
