@@ -2,27 +2,35 @@
   <div class="nav-wrapper">
     <nav>
       <button class="close-btn">
-        <i class="fi-ctluxl-times"></i>
+        <i class="fa fa-close"></i>
       </button>
       <ul class="nav-ul">
         {% for link in linklists.main-menu.links -%}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-            {% if link.links != blank %}
-              <ul class="child">
-                {% for child_link in link.links %}  
-                <li><a href= "{{ child_link.url }}">{{ child_link.title }}</a>
-                {% if child_link.links != blank %}
-                  <ul class="grandchild">
-                  {% for grandchild_link in child_link.links %}  
-                    <li><a href= "{{ grandchild_link.url }}">{{ grandchild_link.title }}</a></li>
-                  {% endfor %}
-                  </ul>
-                {% endif %}   
-                </li>
+          <li class="menu-link">
+            {% if link.links.size == 0 %}
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endif %}
+      
+            {% if link.links.size > 0 %}
+            <a href="#" role="button">{{ link.title }} </a>
+              <ul class="menu dropdown-child">
+                {% for child_link in link.links %}
+                  <li class="menu-link">
+                    <a href="{{ child_link.url }}">{{ child_link.title }}</a>
+      
+                    {% if child_link.links.size > 0 %}
+                      <ul class="menu dropdown-grandchild">
+                        {% for grandchild_link in child_link.links %}
+                          <li class="menu-link">
+                            <a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
                 {% endfor %}
-              </ul> 
-            {% endif %} 
+              </ul>
+            {% endif %}
           </li>
         {%- endfor %}
       </ul>
