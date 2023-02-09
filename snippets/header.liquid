@@ -12,7 +12,8 @@
             {% endif %}
       
             {% if link.links.size > 0 %}
-            <a href="#" role="button">{{ link.title }} </a>
+            <a href="#" role="button">{{ link.title }} ></a>
+            {% comment %} <button class="dropdown-btn">></button> {% endcomment %}
               <ul class="menu dropdown-child">
                 {% for child_link in link.links %}
                   <li class="menu-link">
@@ -206,3 +207,4 @@
 </header>
 
 {{ 'header.js' | asset_url | script_tag }}
+{{ 'nav.js' | asset_url | script_tag }}

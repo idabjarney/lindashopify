@@ -9,6 +9,9 @@ const navWrapper = document.querySelector('.nav-wrapper');
 const searchWrapper = document.querySelector('.search-wrapper');
 const cartWrapper = document.querySelector('.cart-wrapper');
 const headerDiv = document.querySelector('header');
+const dropdownChild = document.querySelector('.dropdown-child');
+const dropdownBtn = document.querySelector('.menu-link:nth-child(2) > a');
+console.log(dropdownBtn)
 
 let shrinkHeader = 115;
 
@@ -19,6 +22,9 @@ searchBtn.addEventListener('click', () => toggleElement(searchWrapper));
 searchCloseBtn.addEventListener('click', () => toggleElement(searchWrapper));
 cartBtn.addEventListener('click', () => toggleElement(cartWrapper));
 cartCloseBtn.addEventListener('click', () => toggleElement(cartWrapper));
+dropdownBtn.addEventListener('click', function() {
+  dropdownChild.classList.toggle('visible')
+});
 
 
 function toggleElement(element) {

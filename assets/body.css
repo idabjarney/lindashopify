@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Gruppo&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Poiret+One&family=Thasadith&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Baskervville:ital@0;1&display=swap");
 header {
   display: flex;
   justify-content: center;
@@ -11,7 +11,8 @@ header {
   width: 100%;
   z-index: 990;
   height: 115px;
-  transition: 500ms; }
+  transition: 500ms;
+  font-family: 'Albert Sans', sans-serif; }
   header.smaller {
     height: 70px; }
   header .hamburger-icon {
@@ -57,7 +58,6 @@ header {
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563);
       cursor: auto;
       padding: 40px 20px;
-      font-family: 'Thasadith', sans-serif;
       font-size: 20px; }
       header .nav-wrapper nav .close-btn {
         display: block;
@@ -78,9 +78,27 @@ header {
         display: flex;
         flex-direction: column;
         margin: 90px 10px 10px 50px; }
-        header .nav-wrapper nav .nav-ul a {
-          text-decoration: none;
-          color: #e4dfd7; }
+        header .nav-wrapper nav .nav-ul .menu-link {
+          list-style-type: none;
+          font-family: 'Baskervville', serif;
+          font-size: 25px; }
+          header .nav-wrapper nav .nav-ul .menu-link a {
+            text-decoration: none;
+            color: #e4dfd7; }
+          header .nav-wrapper nav .nav-ul .menu-link .dropdown-child {
+            height: 0px;
+            overflow: hidden;
+            transition-timing-function: ease;
+            transition: 800ms; }
+            header .nav-wrapper nav .nav-ul .menu-link .dropdown-child li {
+              font-family: 'Albert Sans', sans-serif;
+              font-weight: 300;
+              font-size: 15px; }
+            header .nav-wrapper nav .nav-ul .menu-link .dropdown-child.visible {
+              transition-timing-function: ease;
+              transition: 800ms;
+              height: 110px;
+              padding: 10px 0 10px 15px; }
     header .nav-wrapper.show {
       background-color: rgba(0, 0, 0, 0.403);
       pointer-events: all; }
