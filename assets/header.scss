@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Baskervville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Alice&family=Baskervville:ital@0;1&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+
+
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #20201f;
+  background-color: #1a1a19;
   position: fixed;
   top: 0;
   padding: 0px 15px;
   box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.363);
   width: 100%;
   z-index: 990;
-  height: 115px;
+  height: 90px;
   transition: 500ms;
   font-family: 'Albert Sans', sans-serif;
   &.smaller {
-    height: 70px;
+    height: 60px;
   }
   .hamburger-icon {
     display: flex;
@@ -30,15 +32,18 @@ header {
       border: none;
       background: transparent;
       cursor: pointer;
-      transition: 300ms;
+      transition: 400ms;
+      transition-timing-function: ease;
       color: #c5b8a5;
-      transition: 300ms;
       &:hover {
         transform: scale(1.2);
         color: #e0d4c1;
       }
       &:active {
         transform: scale(0.9);
+      }
+      &:focus {
+        transform: scale(1) rotate(90deg);
       }
       }
   }
@@ -61,58 +66,102 @@ header {
       width: 270px;
       height: 100vh;
       background-color: #20201f;
+      background: rgb(17,17,16);
+      background: linear-gradient(0deg, rgba(17,17,16,1) 8%, rgba(32,32,31,1) 100%);
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563);
       cursor: auto;
-      padding: 40px 20px;
+      // padding: 22px 20px;
       font-size: 20px;
-      .close-btn {
-        display: block;
-        border: none;
-        background: none;
-        color: #c5b8a5;
-        font-size: 25px;
-        padding: 5px;
-        cursor: pointer;
-        margin-left: auto;
-        transition: 300ms;
-        &:hover {
-          transform: scale(1.2);
-          color: #e0d4c1;
+      .nav-top-container {
+        display: flex;
+        padding: 22px 20px;
+        .logo-container {
+          display: flex;
+          align-items: center;
+          width: 150px;
+          padding-left: 20px;
         }
-        &:active {
-          transform: scale(0.9);
+        .close-btn {
+          display: block;
+          border: none;
+          background: none;
+          color: #c5b8a5;
+          font-size: 30px;
+          padding: 5px;
+          cursor: pointer;
+          margin-left: auto;
+          transition: 300ms;
+          &:hover {
+            transform: scale(1.2);
+            color: #e0d4c1;
+          }
+          &:active {
+            transform: scale(0.9);
+          }
+          &:focus {
+            transform: scale(0.9) rotate(-110deg);
+
+          }
         }
       }
       .nav-ul {
         display: flex;
         flex-direction: column;
-        margin: 90px 10px 10px 50px;
+        margin: 10px 10px 10px 50px;
+        padding: 22px 20px;
+
 
         .menu-link {
           list-style-type: none;
-          font-family: 'Baskervville', serif;
-          font-size: 25px;
+          // font-family: 'Baskervville', serif;
+          font-family: 'Alice', serif;
+          font-size: 27px;
+          margin: 5px 0;
           a {
             text-decoration: none;
             color: #e4dfd7;
+            &:hover {
+              color: #c0bbb2;
+            }
             
+          }
+
+          .chevron-icon {
+            font-size: 18px;
+            transform: rotate(0deg);
+            display: inline-block;
+            transition: 350ms;
+            transform: translateY(-3px);
+            margin-left: 60px;
+            &.icon-spin {
+              transform: rotate(90deg);
+            }
           }
           
           .dropdown-child {
             height: 0px;
             overflow: hidden;
             transition-timing-function: ease;
-            transition: 800ms;
+            transition: 400ms;
             li {
-              font-family: 'Albert Sans', sans-serif;
-              font-weight: 300;
-              font-size: 15px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-family: 'Source Sans Pro', sans-serif;
+              font-size: 16px;
+
+              a {
+                color: #c0bbb2;
+                
+                &:hover {
+                  color: #e4dfd7;
+    
+                }
+              }
             }
             &.visible {
+              padding-left: 17px;
               transition-timing-function: ease;
-              transition: 800ms;
-              height: 110px;
-              padding: 10px 0 10px 15px;
+              transition: 400ms;
+              height: 130px;
             }
           }
         }
@@ -135,14 +184,12 @@ header {
     a {
       display: flex;
       text-decoration: none;
-      margin-left: 15%;
+      margin-left: 20%;
       h1 {
         margin-left: 10px;
-        font-size: 42px;
+        font-size: 37px;
         color: #e2d9ca;
-        font-family: 'Baskervville', serif;
-        // font-family: 'Poiret One', cursive;
-        // font-family: 'Thasadith', sans-serif;
+        font-family: 'Alice', serif;
         letter-spacing: 3px;
         font-weight: 200;
 
@@ -154,7 +201,7 @@ header {
         //   margin: 0 auto;
         //   left: 0;
         //   right: 0;
-        //   width: 100%;
+        //   width: 20%;
         //   background-color: #e2d9ca;
         //   bottom: 10px;
         // }

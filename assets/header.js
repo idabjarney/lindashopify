@@ -11,9 +11,9 @@ const cartWrapper = document.querySelector('.cart-wrapper');
 const headerDiv = document.querySelector('header');
 const dropdownChild = document.querySelector('.dropdown-child');
 const dropdownBtn = document.querySelector('.menu-link:nth-child(2) > a');
-console.log(dropdownBtn)
+const chevronIcon = document.querySelector('.chevron-icon');
 
-let shrinkHeader = 115;
+let shrinkHeader = 90;
 
 
 hamburgerBtn.addEventListener('click', () => toggleElement(navWrapper));
@@ -24,6 +24,7 @@ cartBtn.addEventListener('click', () => toggleElement(cartWrapper));
 cartCloseBtn.addEventListener('click', () => toggleElement(cartWrapper));
 dropdownBtn.addEventListener('click', function() {
   dropdownChild.classList.toggle('visible')
+  chevronIcon.classList.toggle('icon-spin');
 });
 
 
