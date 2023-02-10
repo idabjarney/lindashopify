@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Alice&family=Baskervville:ital@0;1&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap");
+.close-btn, .search-close-btn, .cart-close-btn {
+  display: block;
+  border: none;
+  background: none;
+  color: #c5b8a5;
+  font-size: 30px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 300ms; }
+  .close-btn:hover, .search-close-btn:hover, .cart-close-btn:hover {
+    transform: scale(1.2);
+    color: #e0d4c1; }
+  .close-btn:active, .search-close-btn:active, .cart-close-btn:active {
+    transform: scale(0.9); }
+
 header {
   display: flex;
   justify-content: center;
@@ -70,20 +85,7 @@ header {
           width: 150px;
           padding-left: 20px; }
         header .nav-wrapper nav .nav-top-container .close-btn {
-          display: block;
-          border: none;
-          background: none;
-          color: #c5b8a5;
-          font-size: 30px;
-          padding: 5px;
-          cursor: pointer;
-          margin-left: auto;
-          transition: 300ms; }
-          header .nav-wrapper nav .nav-top-container .close-btn:hover {
-            transform: scale(1.2);
-            color: #e0d4c1; }
-          header .nav-wrapper nav .nav-top-container .close-btn:active {
-            transform: scale(0.9); }
+          margin-left: auto; }
           header .nav-wrapper nav .nav-top-container .close-btn:focus {
             transform: scale(0.9) rotate(-110deg); }
       header .nav-wrapper nav .nav-ul {
@@ -177,20 +179,23 @@ header {
     transition: 400ms; }
     header .search-wrapper .search, header .search-wrapper .cart, header .cart-wrapper .search, header .cart-wrapper .cart {
       transition: 500ms;
-      right: -370px;
+      right: -440px;
       top: 0;
       position: absolute;
-      width: 370px;
+      width: 440px;
       height: 100vh;
       background-color: #20201f;
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.563);
+      padding: 22px 20px;
       cursor: auto; }
+      header .search-wrapper .search .search-close-btn:focus, header .search-wrapper .search .cart-close-btn:focus, header .search-wrapper .cart .search-close-btn:focus, header .search-wrapper .cart .cart-close-btn:focus, header .cart-wrapper .search .search-close-btn:focus, header .cart-wrapper .search .cart-close-btn:focus, header .cart-wrapper .cart .search-close-btn:focus, header .cart-wrapper .cart .cart-close-btn:focus {
+        transform: scale(1) rotate(90deg); }
     header .search-wrapper.show, header .cart-wrapper.show {
       pointer-events: all;
       background-color: rgba(0, 0, 0, 0.403); }
       header .search-wrapper.show .search, header .search-wrapper.show .cart, header .cart-wrapper.show .search, header .cart-wrapper.show .cart {
         box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.663);
-        transform: translateX(-370px); }
+        transform: translateX(-440px); }
 
 footer {
   margin-top: auto;
