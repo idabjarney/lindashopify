@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Alice&family=Baskervville:ital@0;1&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+
 
 
 
@@ -15,7 +15,6 @@ header {
   z-index: 990;
   height: 90px;
   transition: 500ms;
-  font-family: 'Albert Sans', sans-serif;
   &.smaller {
     height: 60px;
   }

@@ -11,8 +11,7 @@ header {
   width: 100%;
   z-index: 990;
   height: 90px;
-  transition: 500ms;
-  font-family: 'Albert Sans', sans-serif; }
+  transition: 500ms; }
   header.smaller {
     height: 60px; }
   header .hamburger-icon {
@@ -273,7 +272,8 @@ footer {
 
 body {
   background-color: #20201f;
-  padding-top: 90px; }
+  padding-top: 90px;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .wrapper {
   background-color: #c5b8a5;
