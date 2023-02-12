@@ -1,5 +1,12 @@
 {% paginate search.results by 4 %}
-
+  <div class="search-container">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="What are you looking for?"
+      onfocus="this.placeholder=''"
+      onblur="this.placeholder='What are you looking for?'">
+  </div>
   {% if search.performed %}
     <h1>Here's your results {{ results_count }}
     </h1>

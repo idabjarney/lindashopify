@@ -6,10 +6,17 @@
       </h3> {% endcomment %}
       <ul role="listbox" aria-labelledby="predictive-search-products">
         {%- for product in predictive_search.resources.products -%}
-          <li role="option">
+          <li role="option" class="li-product-card">
             <a href="{{ product.url }}">
-              {{ product | image_url: width: 50 | image_tag }}
-              <span>{{ product.title }}</span>
+              <div class="result-product-container">
+                <div class="img-container">
+                  {{ product | image_url: width: 130 | image_tag }}
+                </div>
+                <div class="text-container">
+                  <p class="product-name">{{ product.title }}</p>
+                  <p class="product-price">{{ product.price | money }}</p>
+                </div>
+              </div>
             </a>
           </li>
         {%- endfor -%}

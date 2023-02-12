@@ -62,44 +62,15 @@
       <i class="fi-xnsuxl-handbag"></i></i>
     </button>
   </div>
-  <div class="search-wrapper">
+  <div class="search-wrapper show">
     <div class="search">
       <button class="search-close-btn">
         <i class="fi-xtluxl-times"></i></i>
       </button>
+      <div class="search-title">
+        <h2>Search</h2>
+      </div>
       {% render 'live-search-form' %}
-
-        {% comment %} {% if settings.show_search %}
-          <form class="search-form" action="/search">
-            <input
-              class="search-input"
-              type="search"
-              name="q">
-            <button class="search-button" type="submit">Search</button>
-          </form>
-        {% endif %}
-        {% if search.performed %}
-        <h1>Here's your results {{ results_count }}
-        </h1>
-    
-        {% for result in search.results %}
-    
-          {% if result.object_type == "page" %}
-            <a href="{{ result.url }}">{{ result.title }}</a>
-          {% elsif result.object_type == "article" %}
-            <a href="{{ result.url }}">{{ result.title }}</a>
-          {% else %}
-            <a href="{{ result.url }}">{{ result.title }}</a>
-          {% endif %}
-    
-          <p>
-            {{ result.object_type }}
-          </p>
-        {% endfor %}
-    
-       {% else %}
-        <h1>Try searching for something</h1>
-      {% endif %} {% endcomment %}
     </div>
   </div>
   <div class="cart-wrapper">

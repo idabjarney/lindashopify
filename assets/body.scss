@@ -7,13 +7,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alice', serif;
+  }
 }
 
 
 body {
   background-color: #20201f;
   padding-top: 90px;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .wrapper {

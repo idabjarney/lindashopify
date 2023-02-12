@@ -2,32 +2,15 @@
   <input
     type="text"
     class="live-search-input"
-    placeholder="Search here....">
+    placeholder="What are you looking for?"
+    onfocus="this.placeholder=''"
+    onblur="this.placeholder='What are you looking for?'">
 </div>
 
-{% if search.performed %}
-  <h1>Here's your results {{ results_count }}
-  </h1>
 
-  {% for result in search.results %}
 
-    {% if result.object_type == "page" %}
-      <a href="{{ result.url }}">{{ result.title }}</a>
-    {% elsif result.object_type == "article" %}
-      <a href="{{ result.url }}">{{ result.title }}</a>
-    {% else %}
-      <a href="{{ result.url }}">{{ result.title }}</a>
-    {% endif %}
-
-    <p>
-      {{ result.object_type }}
-    </p>
-  {% endfor %}
-
-{% else %}
-  <h1>Try searching for something</h1>
-{% endif %}
-
-<div class="result"></div>
+<div class="search-result">
+  <ul></ul>
+</div>
 
 {{ 'live-search.js' | asset_url | script_tag }}
