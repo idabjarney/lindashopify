@@ -233,11 +233,19 @@ header {
       width: 100%; }
       header .search-wrapper .search .search-result ul .li-product-card {
         transition: 300ms; }
+        header .search-wrapper .search .search-result ul .li-product-card:nth-child(5) {
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #afaaa233; }
         header .search-wrapper .search .search-result ul .li-product-card:hover {
           background-color: #20201f; }
+          header .search-wrapper .search .search-result ul .li-product-card:hover .result-product-container .img-container img {
+            opacity: 1; }
         header .search-wrapper .search .search-result ul .li-product-card a .result-product-container {
           padding: 5px 0;
           display: flex; }
+          header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .img-container img {
+            opacity: 0.5; }
           header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .text-container {
             display: flex;
             flex-direction: column;
@@ -251,6 +259,25 @@ header {
             header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .text-container .product-price {
               font-family: 'Source Sans Pro', sans-serif;
               color: #c0bbb2; }
+      header .search-wrapper .search .search-result ul .show-more-btn {
+        display: inline-block;
+        font-family: 'Alice', serif;
+        color: #afaaa2;
+        transition: 300ms;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 4px; }
+        header .search-wrapper .search .search-result ul .show-more-btn::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 1px;
+          background-color: #afaaa2;
+          transition: 300ms;
+          margin-top: 5px; }
+        header .search-wrapper .search .search-result ul .show-more-btn:hover {
+          color: #c2beb7; }
+          header .search-wrapper .search .search-result ul .show-more-btn:hover::after {
+            width: 100%; }
 
 footer {
   margin-top: auto;

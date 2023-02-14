@@ -2,6 +2,7 @@
  const liveSearchInput = document.querySelector('.live-search-input');
  const resultContainer = document.querySelector('.search-result ul');
 
+
  liveSearchInput.addEventListener('input', function(e) {
    const inputValue = e.target.value;
    if (inputValue === '') {
@@ -21,13 +22,21 @@
     const doc = parser.parseFromString(responseMarkup, "text/html");
     const products = Array.from(doc.querySelectorAll('.li-product-card'));
     if (inputElement.value === '') return;
-    if (products.length >= 5) {
+    if (products.length > 5) {
       products.splice(0, 5).forEach(product => {
         resultContainer.appendChild(product);
-        const anchor = document.createElement('a');
-        // anchor.href = 
       });
+      const inputValue = inputElement.value;
+      const anchor = document.createElement('a');
+      anchor.href = `/search/?q=${inputValue}`;
+      anchor.innerText = 'Show more';
+      resultContainer.appendChild(anchor);
+      anchor.className = 'show-more-btn';
     } else {
+      // const producth2 = document.createElement('h2');
+      // producth2.innerText = 'Products';
+      // resultContainer.appendChild(producth2);
+      // producth2.className = 'product-h2';
       products.forEach(product => {
         resultContainer.appendChild(product);
       });

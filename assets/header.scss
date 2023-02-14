@@ -316,37 +316,77 @@ header {
         height: 80%;
         
         ul {
-              width: 100%;
-              .li-product-card {
-                transition: 300ms;
-                &:hover {
-                  background-color: #20201f;
+            width: 100%;
+            .li-product-card {
+              transition: 300ms;
+              
+              &:nth-child(5) {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #afaaa233;
+              }
+              &:hover {
+                background-color: #20201f;
+                .result-product-container  .img-container img {
+                  opacity: 1;
                 }
-                a {
-                  .result-product-container {
-                    padding: 5px 0;
-                    display: flex;
-
-                    .text-container {
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: center;
-                      margin-left: 10px;
-                      .product-name {
-                        font-family: 'Alice', serif;
-                        color: #e4dfd7;
-                        margin-bottom: 10px;
-                        font-size: 17px;
-                      }
-                      .product-price {
-                        font-family: 'Source Sans Pro', sans-serif;
-                        color: #c0bbb2;
-                      }
+              }
+              a {
+                .result-product-container {
+                  padding: 5px 0;
+                  display: flex;
+                  .img-container {
+                    img {
+                      opacity: 0.5;
+                      
                     }
                   }
+                  .text-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+                    .product-name {
+                      font-family: 'Alice', serif;
+                      color: #e4dfd7;
+                      margin-bottom: 10px;
+                      font-size: 17px;
+                    }
+                    .product-price {
+                      font-family: 'Source Sans Pro', sans-serif;
+                      color: #c0bbb2;
+                    }
+                  }
+
                 }
               }
             }
+            .show-more-btn {
+              display: inline-block;
+              font-family: 'Alice', serif;
+              color: #afaaa2;
+              // margin-left: 7px;
+              transition: 300ms;
+              border-bottom: 1px solid transparent;
+              padding-bottom: 4px;
+              &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: #afaaa2;
+                transition: 300ms;
+                margin-top: 5px;
+              }
+              &:hover {
+                color: #c2beb7;
+                // border-bottom-color: #afaaa2;
+                &::after {
+                  width: 100%;
+                }
+              }
+            }
+          }
       }
     }
   }
