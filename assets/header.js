@@ -9,8 +9,11 @@ const navWrapper = document.querySelector('.nav-wrapper');
 const searchWrapper = document.querySelector('.search-wrapper');
 const cartWrapper = document.querySelector('.cart-wrapper');
 const headerDiv = document.querySelector('header');
+const dropdownChild = document.querySelector('.dropdown-child');
+const dropdownBtn = document.querySelector('.menu-link:nth-child(2) > a');
+const chevronIcon = document.querySelector('.chevron-icon');
 
-let shrinkHeader = 115;
+let shrinkHeader = 90;
 
 
 hamburgerBtn.addEventListener('click', () => toggleElement(navWrapper));
@@ -19,6 +22,10 @@ searchBtn.addEventListener('click', () => toggleElement(searchWrapper));
 searchCloseBtn.addEventListener('click', () => toggleElement(searchWrapper));
 cartBtn.addEventListener('click', () => toggleElement(cartWrapper));
 cartCloseBtn.addEventListener('click', () => toggleElement(cartWrapper));
+dropdownBtn.addEventListener('click', function() {
+  dropdownChild.classList.toggle('visible')
+  chevronIcon.classList.toggle('icon-spin');
+});
 
 
 function toggleElement(element) {

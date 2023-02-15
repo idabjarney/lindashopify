@@ -1,0 +1,16 @@
+<div class="live-search-container">
+  <input
+    type="text"
+    class="live-search-input"
+    placeholder="What are you looking for?"
+    onfocus="this.placeholder=''"
+    onblur="this.placeholder='What are you looking for?'">
+</div>
+
+
+
+<div class="search-result">
+  <ul></ul>
+</div>
+
+{{ 'live-search.js' | asset_url | script_tag }}

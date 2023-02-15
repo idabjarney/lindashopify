@@ -8,10 +8,18 @@
     </button>
   </div>
   <div class="slide-img-container">
-    <div class="slide1 slide"><img src="/assets/landing-mugs-from-above1.jpg"></div>
-    <div class="slide3 slide"><img src="/assets/landing-pottery-and-oranges1.jpg" alt=""></div>
-    <div class="slide2 slide"><img src="/assets/landing-pottery-mix1.jpg"></div>
-    <div class="slide4 slide"><img src="/assets/landing-mugs-lined-up1.jpg"></div>
+    <div class="slide1 slide">
+      <img src="{{ 'landing-mugs-from-above1.jpg' | asset_img_url: '1920x' }}">
+    </div>
+    <div class="slide2 slide">
+      <img src="{{ 'landing-pottery-mix1.jpg' | asset_img_url: '1920x' }}">
+    </div>
+    <div class="slide3 slide">
+      <img src="{{ 'landing-pottery-and-oranges1.jpg' | asset_img_url: '1920x' }}" alt="">
+    </div>
+    <div class="slide4 slide">
+      <img src="{{ 'landing-mugs-lined-up1.jpg' | asset_img_url: '1920x' }}">
+    </div>
   </div>
   <div class="carousel-control-buttons">
     <button class="slide1-button active"></button>
@@ -21,4 +29,4 @@
   </div>
 </div>
 
-<script src="../assets/landing-carousel.js"></script>
+{{ 'landing-carousel.js' | asset_url | script_tag }}
