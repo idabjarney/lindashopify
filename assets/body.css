@@ -177,6 +177,7 @@ header {
     pointer-events: none;
     background-color: rgba(0, 0, 0, 0); }
     header .search-wrapper .search, header .search-wrapper .cart, header .cart-wrapper .search, header .cart-wrapper .cart {
+      color: #c5b8a5;
       right: -440px;
       top: 0;
       position: absolute;
@@ -201,7 +202,7 @@ header {
     height: 90px;
     align-items: flex-end;
     display: flex;
-    color: #e4dfd7;
+    color: #c5b8a5;
     font-size: 20px;
     font-weight: lighter;
     letter-spacing: 1.6px;
@@ -262,7 +263,7 @@ header {
         header .search-wrapper .search .search-result ul .li-product-card a .result-product-container {
           display: flex; }
           header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .img-container img {
-            opacity: 0.5; }
+            opacity: 0.7; }
           header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .text-container {
             display: flex;
             flex-direction: column;
@@ -271,7 +272,7 @@ header {
             header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .text-container .product-name {
               font-family: 'Alice', serif;
               letter-spacing: 0.4px;
-              color: #dfd8cb;
+              color: #c5b8a5;
               margin-bottom: 10px;
               font-size: 16px; }
             header .search-wrapper .search .search-result ul .li-product-card a .result-product-container .text-container .product-price {

@@ -244,6 +244,7 @@ header {
     // transition: 400ms;
     
     .search, .cart {
+      color: #c5b8a5;
       // transition: 500ms;
       right: -440px;
       top: 0;
@@ -280,7 +281,7 @@ header {
         height: 90px;
         align-items: flex-end;
         display: flex;
-        color: #e4dfd7;
+        color: #c5b8a5;
         font-size: 20px;
         font-weight: lighter;
         letter-spacing: 1.6px;
@@ -363,7 +364,7 @@ header {
                   display: flex;
                   .img-container {
                     img {
-                      opacity: 0.5;
+                      opacity: 0.7;
                       
                     }
                   }
@@ -375,7 +376,7 @@ header {
                     .product-name {
                       font-family: 'Alice', serif;
                       letter-spacing: 0.4px;
-                      color: #dfd8cb;
+                      color: #c5b8a5;
                       margin-bottom: 10px;
                       font-size: 16px;
                     }
