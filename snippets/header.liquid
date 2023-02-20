@@ -73,12 +73,12 @@
       {% render 'live-search-form' %}
     </div>
   </div>
-  <div class="cart-wrapper show">
+  <div class="cart-wrapper">
     <div class="cart">
       <button class="cart-close-btn">
         <i class="fi-xtluxl-times"></i>
       </button>
-      {% form 'cart', cart %}
+      {% comment %} {% form 'cart', cart %}
 
         <h1>Cart</h1>
       
@@ -112,7 +112,7 @@
       
         {% endif %}
       
-      {% endform %}
+      {% endform %} {% endcomment %}
     </div>
   </div>
 
@@ -120,5 +120,3 @@
 
 
 {{ 'header.js' | asset_url | script_tag }}
-{{ 'nav.js' | asset_url | script_tag }}
-{{ 'cart.js' | asset_url | script_tag }}
