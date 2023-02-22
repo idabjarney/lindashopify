@@ -1,19 +1,22 @@
 <div class="cart-container" data-money-format="{{ shop.money_format }}">
   {% form 'cart', cart %}
-
-    <h1>Cart</h1>
+    <div class="cart-title title">
+      <h2>Cart</h2>
+    </div>
 
     {% if cart.empty? %}
       <div class="cart-empty">
         <p>Your cart is empty</p>
-        <a href="/" class="button">
-          Keep shopping
-        </a>
+        {% comment %} <a href="/" class="button">
+        Keep shopping
+        </a> {% endcomment %}
       </div>
     {% else %}
-      {% for item in cart.items %}
-        {% render 'cart-item' width: 260, item: item %}
-      {% endfor %}
+      <div class="cart-item-wrapper">
+        {% for item in cart.items %}
+          {% render 'cart-item' width: 150, item: item %}
+        {% endfor %}
+      </div>
       <div class="cart-totals">
         <p>Discounts:
           <span id="total-discount">{{ cart.total_discounts | money }}</span>
