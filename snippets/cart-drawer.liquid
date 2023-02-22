@@ -17,17 +17,21 @@
           {% render 'cart-item' width: 150, item: item %}
         {% endfor %}
       </div>
-      <div class="cart-totals">
-        <p>Discounts:
-          <span id="total-discount">{{ cart.total_discounts | money }}</span>
-        </p>
-        <p>
-          Total:
-          <span id="total-price">{{ cart.total_price | money }}</span>
-        </p>
+      <div class="cart-info">
+        <div class="view-cart-btn">
+          <a href="/cart">View cart</a>
+        </div>
+        <div class="cart-totals">
+          <p class="discount">Discount:
+            <span id="total-discount">{{ cart.total_discounts | money }}</span>
+          </p>
+          <p class="total">
+            Total:
+            <span id="total-price">{{ cart.total_price | money }}</span>
+          </p>
+        </div>
       </div>
-      <div class="cart-buttons">
-        <button type="submit" name="update">Update</button>
+      <div class="checkout-button">
         <button type="submit" name="checkout">Checkout</button>
       </div>
 
