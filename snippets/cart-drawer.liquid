@@ -1,0 +1,47 @@
+<div class="cart-container" data-money-format="{{ shop.money_format }}">
+  {% form 'cart', cart %}
+    <div class="cart-title title">
+      <h2>Cart</h2>
+    </div>
+
+    {% if cart.empty? %}
+      <div class="cart-empty">
+        <p>Your cart is empty</p>
+        {% comment %} <a href="/" class="button">
+        Keep shopping
+        </a> {% endcomment %}
+      </div>
+    {% else %}
+      <div class="cart-item-wrapper">
+        {% for item in cart.items %}
+          {% render 'cart-item' width: 150, item: item %}
+        {% endfor %}
+      </div>
+      <div class="cart-info">
+        <div class="view-cart-btn">
+          <a href="/cart">View cart</a>
+        </div>
+        <div class="cart-totals">
+          <p class="discount">Discount:
+            <span id="total-discount">{{ cart.total_discounts | money }}</span>
+          </p>
+          <p class="total">
+            Total:
+            <span id="total-price">{{ cart.total_price | money }}</span>
+          </p>
+        </div>
+      </div>
+      <div class="checkout-button">
+        <button type="submit" name="checkout">Checkout</button>
+      </div>
+
+    {% endif %}
+
+  {% endform %}
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+{{ 'cart.js' | asset_url | script_tag }}
