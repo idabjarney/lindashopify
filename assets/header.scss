@@ -17,6 +17,8 @@
   }
 }
 
+
+
 header {
   display: flex;
   justify-content: center;
@@ -535,29 +537,29 @@ header {
           width: 100%;
           margin-top: 10px;
           .view-cart-btn {
-            a {
-              display: inline-block;
-              font-family: 'Source Sans Pro', sans-serif;
-              color: #afaaa2;
-              letter-spacing: 0.4px;
-              transition: 300ms;
-              // font-weight: 300;
-              &::after {
-                content: '';
-                display: block;
-                width: 0;
-                height: 1px;
-                background-color: #afaaa233;
-                transition: 300ms;
-                margin-top: 5px;
-              }
-              &:hover {
-                color: #c2beb7;
-                &::after {
-                  width: 100%;
-                }
-              }
-            }
+            // a {
+            //   display: inline-block;
+            //   font-family: 'Source Sans Pro', sans-serif;
+            //   color: #afaaa2;
+            //   letter-spacing: 0.4px;
+            //   transition: 300ms;
+            //   // font-weight: 300;
+            //   &::after {
+            //     content: '';
+            //     display: block;
+            //     width: 0;
+            //     height: 1px;
+            //     background-color: #afaaa233;
+            //     transition: 300ms;
+            //     margin-top: 5px;
+            //   }
+            //   &:hover {
+            //     color: #c2beb7;
+            //     &::after {
+            //       width: 100%;
+            //     }
+            //   }
+            // }
           }
           .cart-totals {
             display: flex;

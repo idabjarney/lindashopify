@@ -47,3 +47,27 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.underline-anchor-tag {
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #afaaa2;
+  letter-spacing: 0.4px;
+  transition: 300ms;
+  // font-weight: 300;
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #afaaa233;
+    transition: 300ms;
+    margin-top: 5px;
+  }
+  &:hover {
+    color: #cfcac2;
+    &::after {
+      width: 100%;
+    }
+  }
+}
