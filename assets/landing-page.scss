@@ -11,9 +11,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      // border-bottom: 1px solid #afaaa2af;
-      margin-bottom: 10px;
-      // padding-bottom: 30px;
+      margin-bottom: 40px;
       .text-container {
         height: 300px;
         width: 100%;
@@ -100,6 +98,7 @@
           font-size: 30px;
           margin-bottom: 30px;
           color: #1A1A19;
+          width: 100%;
         }
         p {
           max-width: 500px;
@@ -108,14 +107,27 @@
           font-size: 18px;
           line-height: 23px;
           color: #3b3b3a;
+          margin-bottom: 20px;
+        }
+        .link-container {
           &::after {
             content: '';
             display: block;
             width: 600px;
             height: 1px;
             background-color: rgba(80, 78, 75, 0.897);
-            margin-top: 150px;
+            transform: translateY(70px);
           }
+          a {
+            color: #3b3b3a;
+            &::after {
+              background-color: #464340b2;
+            }
+            &:hover {
+              color: #1A1A19;
+            }
+          }
+        
         }
       }
       &:nth-child(odd) {
@@ -125,9 +137,9 @@
         }
         .text-container {
           align-items: flex-end;
-          h2 {
-            margin-right: 25px;
-          }
+          // h2 {
+          //   margin-right: 25px;
+          // }
           p {
             &::after {
               content: '';
@@ -162,6 +174,57 @@
           border-right: solid 3px #DDD7CE;
         }
 
+      }
+    }
+  }
+  .about-creator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+    .inner-container {
+      background-color: #1A1A19;
+      position: absolute;
+      display: flex;
+      width: 42%;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 40%;
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        h2 {
+          color: #cec6bb;
+          font-size: 35px;
+          max-width: 550px;
+          margin-bottom: 40px;
+        }
+        p {
+          color: #ddd7ceb9;
+          max-width: 550px;
+          text-align: justify;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 23px;
+          margin-bottom: 30px;
+        }
+        .link-container {
+          max-width: 650px;
+          a {
+            color: #ddd7cec4;
+            &:hover {
+              color: #e7e1d7;
+                
+            }
+            }
+        }
       }
     }
   }

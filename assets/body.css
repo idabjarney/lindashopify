@@ -502,7 +502,7 @@ footer {
       display: flex;
       align-items: center;
       flex-direction: column;
-      margin-bottom: 10px; }
+      margin-bottom: 40px; }
       .landing-wrapper .landing-container .intro-container .text-container {
         height: 300px;
         width: 100%;
@@ -571,28 +571,34 @@ footer {
           max-width: 500px;
           font-size: 30px;
           margin-bottom: 30px;
-          color: #1A1A19; }
+          color: #1A1A19;
+          width: 100%; }
         .landing-wrapper .landing-container .item-showcase .text-container p {
           max-width: 500px;
           text-align: justify;
           font-weight: 400;
           font-size: 18px;
           line-height: 23px;
+          color: #3b3b3a;
+          margin-bottom: 20px; }
+        .landing-wrapper .landing-container .item-showcase .text-container .link-container::after {
+          content: '';
+          display: block;
+          width: 600px;
+          height: 1px;
+          background-color: rgba(80, 78, 75, 0.897);
+          transform: translateY(70px); }
+        .landing-wrapper .landing-container .item-showcase .text-container .link-container a {
           color: #3b3b3a; }
-          .landing-wrapper .landing-container .item-showcase .text-container p::after {
-            content: '';
-            display: block;
-            width: 600px;
-            height: 1px;
-            background-color: rgba(80, 78, 75, 0.897);
-            margin-top: 150px; }
+          .landing-wrapper .landing-container .item-showcase .text-container .link-container a::after {
+            background-color: #464340b2; }
+          .landing-wrapper .landing-container .item-showcase .text-container .link-container a:hover {
+            color: #1A1A19; }
       .landing-wrapper .landing-container .item-showcase:nth-child(odd) .img-container {
         margin-left: 90px;
         margin-right: 0; }
       .landing-wrapper .landing-container .item-showcase:nth-child(odd) .text-container {
         align-items: flex-end; }
-        .landing-wrapper .landing-container .item-showcase:nth-child(odd) .text-container h2 {
-          margin-right: 25px; }
         .landing-wrapper .landing-container .item-showcase:nth-child(odd) .text-container p::after {
           content: '';
           display: block;
@@ -609,6 +615,47 @@ footer {
       .landing-wrapper .landing-container .item-showcase.three .colour-block {
         width: 140px;
         border-right: solid 3px #DDD7CE; }
+  .landing-wrapper .about-creator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+    position: relative; }
+    .landing-wrapper .about-creator-container img {
+      object-fit: cover;
+      width: 100%; }
+    .landing-wrapper .about-creator-container .inner-container {
+      background-color: #1A1A19;
+      position: absolute;
+      display: flex;
+      width: 42%;
+      height: 400px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 40%; }
+      .landing-wrapper .about-creator-container .inner-container .text-container {
+        display: flex;
+        flex-direction: column; }
+        .landing-wrapper .about-creator-container .inner-container .text-container h2 {
+          color: #cec6bb;
+          font-size: 35px;
+          max-width: 550px;
+          margin-bottom: 40px; }
+        .landing-wrapper .about-creator-container .inner-container .text-container p {
+          color: #ddd7ceb9;
+          max-width: 550px;
+          text-align: justify;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 23px;
+          margin-bottom: 30px; }
+        .landing-wrapper .about-creator-container .inner-container .text-container .link-container {
+          max-width: 650px; }
+          .landing-wrapper .about-creator-container .inner-container .text-container .link-container a {
+            color: #ddd7cec4; }
+            .landing-wrapper .about-creator-container .inner-container .text-container .link-container a:hover {
+              color: #e7e1d7; }
 
 * {
   margin: 0;
