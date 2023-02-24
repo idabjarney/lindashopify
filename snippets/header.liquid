@@ -17,7 +17,7 @@
             {% endif %}
       
             {% if link.links.size > 0 %}
-            <a href="#" role="button">{{ link.title }} <i class="fi-xnlrxl-chevron-thin chevron-icon"></i></a>
+            <a class="shop-dropdown-btn" role="button">{{ link.title }} <i class="fi-xnlrxl-chevron-thin chevron-icon"></i></a>
             {% comment %} <button class="dropdown-btn">></button> {% endcomment %}
               <ul class="menu dropdown-child">
                 {% for child_link in link.links %}

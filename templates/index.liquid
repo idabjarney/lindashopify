@@ -1,10 +1,10 @@
 {% render 'landing-carousel' %}
+{% render 'landing-page' %}
 
-
-<h2>
-  {{ collections['featured-products'].title }}
+{% comment %} <h2>
+{{ collections['featured-products'].title }}
 </h2>
 
 {% for product in collections['featured-products'].products %}
-  {% render 'product-item', product: product %}
-{% endfor %}
+{% render 'product-item', product: product %}
+{% endfor %} {% endcomment %}
