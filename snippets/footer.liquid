@@ -1,44 +1,46 @@
 <footer>
   <div class="footer-container">
     <div class="navs">
-      <ul class="help-ul">
+      <div class="left-nav">
         <h4>Help</h4>
-        {% for link in linklists.footer.links -%}
-          {{ link.title | link_to: link.url }}
-        {%- endfor %}
-      </ul>
-      <ul class="pages-ul">
+        <ul class="help-ul">
+          {% for link in linklists.footer.links -%}
+            <li>{{ link.title | link_to: link.url }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="right-nav">
         <h4>Pages</h4>
-        {% for link in linklists.pages-nav.links -%}
-          {{ link.title | link_to: link.url }}
-        {%- endfor %}
-      </ul>
+        <ul class="pages-ul">
+          {% for link in linklists.pages-nav.links -%}
+            <li>{{ link.title | link_to: link.url }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
     </div>
-    <div class="right-nav"></div>
     <div class="contact-container">
       <div class="info-container">
         <h4>Get in touch</h4>
-        <p>linda@lindacreates.com</p>
+        <p>linda@lindaceramics.com</p>
       </div>
       <div class="socials-container">
         <ul>
-          <li>
-            <i class="fi-cnsuxl-facebook-circle"></i>
-          </li>
-          <li>
-            <i class="fi-xnsuxl-instagram"></i>
-          </li>
-          <li>
-            <i class="fi-cnsuxl-linkedin"></i>
-          </li>
-          <li>
-            <i class="fi-cwsuxl-youtube"></i>
-          </li>
+          <li><a href="#"><i class="fi-cnsuxl-facebook-circle"></i></a></li>
+          <li><a href="#s"><i class="fi-xnsuxl-instagram"></i></a></li>
+          <li><a href="#"><i class="fi-cnsuxl-linkedin"></i></a></li>
+          <li><a href="#"><i class="fi-cwsuxl-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div class="payment-container">
+        <ul>
+          <li><img src="{{ 'visa.png' | asset_img_url: '1920x' }}" alt=""></li>
+          <li><img src="{{ 'mastercard.png' | asset_img_url: '1920x' }}" alt=""></li>
+          <li><img src="{{ 'paypal.png' | asset_img_url: '1920x' }}" alt=""></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="copyright-container">
-    <p>Copyright © 2023, Lindaceramics</p>
+    <p>Copyright © 2023 | Lindaceramics</p>
   </div>
 </footer>
