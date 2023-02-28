@@ -1,8 +1,38 @@
 footer {
   display: flex;
+  flex-direction: column;
   margin-top: auto;
-  background-color: #1a1a19;
+  background: rgb(17,17,16);
+  background: linear-gradient(0deg, rgb(31, 31, 30) 8%, rgb(24, 24, 23) 100%);
   width: 100%;
-  height: 400px;
-
+  color: #ddd7cec4;
+  .footer-container {
+    display: flex;
+    padding: 30px 10%;
+    justify-content: space-between;
+    .navs {
+      display: flex;
+      
+    }
+  }
+  .help-ul, .pages-ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    &:nth-child(1) {
+      margin-right: 100px;
+    }
+    h4 {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+  .copyright-container {
+    padding: 10px;
+    p {
+      color: #ddd7ce83;
+      font-size: 15px;
+      font-style: italic;
+    }
+  }
 }

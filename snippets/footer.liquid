@@ -1,23 +1,24 @@
 <footer>
   <div class="footer-container">
-    <div class="left-nav">
+    <div class="navs">
       <ul class="help-ul">
+        <h4>Help</h4>
         {% for link in linklists.footer.links -%}
           {{ link.title | link_to: link.url }}
         {%- endfor %}
       </ul>
-    </div>
-    <div class="right-nav">
       <ul class="pages-ul">
+        <h4>Pages</h4>
         {% for link in linklists.pages-nav.links -%}
           {{ link.title | link_to: link.url }}
         {%- endfor %}
       </ul>
     </div>
+    <div class="right-nav"></div>
     <div class="contact-container">
       <div class="info-container">
         <h4>Get in touch</h4>
-        <p>lindac@lindacreates.com</p>
+        <p>linda@lindacreates.com</p>
       </div>
       <div class="socials-container">
         <ul>
@@ -27,9 +28,17 @@
           <li>
             <i class="fi-xnsuxl-instagram"></i>
           </li>
-          <li></li>
+          <li>
+            <i class="fi-cnsuxl-linkedin"></i>
+          </li>
+          <li>
+            <i class="fi-cwsuxl-youtube"></i>
+          </li>
         </ul>
       </div>
     </div>
+  </div>
+  <div class="copyright-container">
+    <p>Copyright © 2023, Lindaceramics</p>
   </div>
 </footer>
