@@ -804,6 +804,27 @@ footer {
   100% {
     opacity: 1; } }
 
+.collection-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px; }
+  .collection-wrapper .collection-info-wrapper {
+    display: flex;
+    width: 80%; }
+    .collection-wrapper .collection-info-wrapper .collection-text-container {
+      width: 50%;
+      background-color: red; }
+    .collection-wrapper .collection-info-wrapper .collection-image-container img {
+      max-height: 250px; }
+  .collection-wrapper .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px; }
+
 * {
   margin: 0;
   padding: 0;
