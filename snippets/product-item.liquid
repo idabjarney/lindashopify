@@ -1,11 +1,13 @@
-<div class="productdisplay">
+<div class="product-item">
   <a href="{{ product.url }}">
-    <img src="{{ product.featured_image | image_url: width: 400 }}" />
-    <h3>
-      {{ product.title }}
-    </h3>
-    <p>
-      {{ product.price | money }}
-    </p>
+    <img src="{{ product.featured_image | image_url: width: 1920x }}" />
+    <div class="product-text">
+      <h4>
+        {{ product.title }}
+      </h4>
+      <p>
+        {{ product.price | money }}
+      </p>
+    </div>
   </a>
 </div>
