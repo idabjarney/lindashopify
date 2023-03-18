@@ -866,7 +866,7 @@ footer {
   .collection-wrapper .products {
     display: grid;
     overflow: hidden;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     width: 80%; }
@@ -889,6 +889,114 @@ footer {
       .collection-wrapper .products .product-item a .product-text p {
         color: #4e4e4b;
         font-size: 14px; }
+  .collection-wrapper .filters {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 5px; }
+    .collection-wrapper .filters .btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #85857f;
+      margin-bottom: 10px;
+      padding-bottom: 6px; }
+      .collection-wrapper .filters .btn-container .filters-btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 16px;
+        color: #52524f;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        transform: scale(1);
+        transition: 300ms;
+        margin-left: 10px; }
+        .collection-wrapper .filters .btn-container .filters-btn i {
+          font-size: 10px;
+          padding-left: 5px;
+          transition: 300ms; }
+          .collection-wrapper .filters .btn-container .filters-btn i.rotate {
+            transform: rotate(90deg) translateX(-1px); }
+        .collection-wrapper .filters .btn-container .filters-btn:hover {
+          transform: scale(1.2);
+          color: #474744; }
+      .collection-wrapper .filters .btn-container select {
+        padding: 3px 15px;
+        outline: none;
+        color: #3f3f3c;
+        background-color: #f0eae2; }
+        .collection-wrapper .filters .btn-container select option {
+          padding: 10px; }
+    .collection-wrapper .filters .filter-sort-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      transition: 300ms; }
+      .collection-wrapper .filters .filter-sort-container.closed {
+        display: none; }
+      .collection-wrapper .filters .filter-sort-container .filter-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 100%; }
+        .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper {
+          display: flex;
+          width: 70%;
+          justify-content: space-between; }
+          .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group {
+            display: flex;
+            width: 200px; }
+            .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display {
+              color: #3d3d3b;
+              font-size: 13px;
+              width: 200px; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-name {
+                margin-bottom: 10px; }
+                .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-name span {
+                  color: #3d3d3b;
+                  text-transform: uppercase;
+                  font-size: 14px;
+                  font-weight: 600; }
+                .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-name .active-number {
+                  font-weight: 400;
+                  padding: 0 3px;
+                  font-size: 13px; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-group-display__price-range label {
+                display: inline-block;
+                width: 35px; }
+        .collection-wrapper .filters .filter-sort-container .filter-form .active-filters {
+          display: flex; }
+          .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit {
+            display: flex;
+            align-items: center; }
+            .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit input {
+              cursor: pointer;
+              width: 150px;
+              height: 30px;
+              border: 1px solid #5a5a559c;
+              background-color: #f0eae2;
+              font-size: 13px;
+              margin-bottom: 5px; }
+            .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper {
+              display: flex;
+              margin-left: 5px; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper p, .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear {
+                font-size: 13px;
+                color: #383835; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear {
+                margin-left: 5px; }
+                .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear::after {
+                  background-color: #464340b2;
+                  margin-top: 2px; }
+                .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear:hover {
+                  color: #1a1a19; }
+          .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .active-filters__remove-filter {
+            font-size: 12px;
+            color: #52524f; }
 
 * {
   margin: 0;
