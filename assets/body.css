@@ -756,15 +756,15 @@ footer {
   .landing-wrapper .reveal.active {
     opacity: 1; }
   .landing-wrapper .active.fade-top {
-    animation: fade-top 1s ease; }
+    animation: fade-top 0.8s ease; }
   .landing-wrapper .active.fade-bottom {
-    animation: fade-bottom 3s ease; }
+    animation: fade-bottom 1.6s ease; }
   .landing-wrapper .active.fade-left {
-    animation: fade-left 2.3s ease; }
+    animation: fade-left 1.2s ease; }
   .landing-wrapper .active.fade-right {
-    animation: fade-right 2.3s ease; }
+    animation: fade-right 1.2s ease; }
   .landing-wrapper .active.fade-in {
-    animation: fade-in 2s ease; }
+    animation: fade-in 1s ease; }
 
 @keyframes fade-bottom {
   0% {
@@ -856,6 +856,8 @@ footer {
         display: flex;
         width: 70%;
         justify-content: space-between; }
+        .collection-wrapper .collection-info-wrapper .collection-text-container .link-container.collection-other {
+          justify-content: center; }
         .collection-wrapper .collection-info-wrapper .collection-text-container .link-container a {
           font-weight: 400;
           font-size: 16px; }
@@ -946,6 +948,7 @@ footer {
         .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper {
           display: flex;
           width: 70%;
+          max-width: 700px;
           justify-content: space-between; }
           .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group {
             display: flex;
@@ -965,11 +968,23 @@ footer {
                   font-weight: 400;
                   padding: 0 3px;
                   font-size: 13px; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-group-display__list {
+                display: flex;
+                flex-direction: column; }
+                .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-group-display__list li label {
+                  display: flex;
+                  align-items: center;
+                  height: 18px; }
+                  .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-group-display__list li label input {
+                    margin-right: 5px; }
               .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-group-display__price-range label {
                 display: inline-block;
                 width: 35px; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .filter-group-wrapper .filter-group .filter-group-display .filter-group-display__price-range .filter-group-display__price-range-from {
+                margin-bottom: 5px; }
         .collection-wrapper .filters .filter-sort-container .filter-form .active-filters {
-          display: flex; }
+          display: flex;
+          height: 50px; }
           .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit {
             display: flex;
             align-items: center; }
@@ -980,7 +995,9 @@ footer {
               border: 1px solid #5a5a559c;
               background-color: #f0eae2;
               font-size: 13px;
-              margin-bottom: 5px; }
+              transition: 300ms; }
+              .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit input:hover {
+                background-color: #fcf8f3ea; }
             .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper {
               display: flex;
               margin-left: 5px; }
@@ -988,10 +1005,13 @@ footer {
                 font-size: 13px;
                 color: #383835; }
               .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear {
-                margin-left: 5px; }
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+                align-items: center; }
                 .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear::after {
                   background-color: #464340b2;
-                  margin-top: 2px; }
+                  margin-top: 1px; }
                 .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .filter-group-display__submit .clear-wrapper .active-filters__clear:hover {
                   color: #1a1a19; }
           .collection-wrapper .filters .filter-sort-container .filter-form .active-filters .active-filters__remove-filter {

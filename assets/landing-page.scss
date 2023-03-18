@@ -259,19 +259,19 @@
     opacity: 1;
   }
   .active.fade-top {
-    animation: fade-top 1s ease;
+    animation: fade-top 0.8s ease;
   }
   .active.fade-bottom {
-    animation: fade-bottom 3s ease;
+    animation: fade-bottom 1.6s ease;
   }
   .active.fade-left {
-    animation: fade-left 2.3s ease;
+    animation: fade-left 1.2s ease;
   }
   .active.fade-right {
-    animation: fade-right 2.3s ease;
+    animation: fade-right 1.2s ease;
   }
   .active.fade-in {
-    animation: fade-in 2s ease;
+    animation: fade-in 1s ease;
   }
 }
 @keyframes fade-bottom {

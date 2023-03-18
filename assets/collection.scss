@@ -56,6 +56,9 @@
         display: flex;
         width: 70%;
         justify-content: space-between;
+        &.collection-other {
+          justify-content: center;
+        }
         a {
           font-weight: 400;
           font-size: 16px;
@@ -181,6 +184,7 @@
         .filter-group-wrapper {
           display: flex;
           width: 70%;
+          max-width: 700px;
           justify-content: space-between;
           .filter-group {
             display: flex;
@@ -203,10 +207,27 @@
                   font-size: 13px;
                 }
               }
+              .filter-group-display__list {
+                display: flex;
+                flex-direction: column;
+                li {
+                  label {
+                    display: flex;
+                    align-items: center;
+                    height: 18px;
+                    input {
+                      margin-right: 5px;
+                    }
+                  }
+                }
+              }
               .filter-group-display__price-range {
                 label {
                   display: inline-block;
                   width: 35px;
+                }
+                .filter-group-display__price-range-from {
+                  margin-bottom: 5px;
                 }
               }
             }
@@ -214,6 +235,7 @@
         }
         .active-filters {
           display: flex;
+          height: 50px;
           .filter-group-display__submit {
             display: flex;
             align-items: center;
@@ -224,20 +246,29 @@
               border: 1px solid #5a5a559c;
               background-color: #f0eae2;
               font-size: 13px;
-              margin-bottom: 5px;
+              transition: 300ms;
+              // margin: 10px 0 5px 0;
+              &:hover {
+                background-color: #fcf8f3ea;
+
+              }
             }
             .clear-wrapper {
               display: flex;
               margin-left: 5px;
+              // align-items: center;
               p, .active-filters__clear {
                 font-size: 13px;
                 color: #383835;
               }
               .active-filters__clear {
+                display: flex;
+                flex-direction: column;
                 margin-left: 5px;
+                align-items: center;
                 &::after {
                   background-color: #464340b2;
-                  margin-top: 2px;
+                  margin-top: 1px;
                 }
                 &:hover {
                   color: #1a1a19;
