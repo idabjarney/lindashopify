@@ -1,15 +1,36 @@
-<div class="cart-wrapper">
-  <div class="image-wrapper">
-    <img src="{{ product.featured_image | image_url: width: 1920x }}" alt="{{ product.title }}" loading="lazy" />
-  </div>
-  <div class="info-wrapper">
-    <div class="info-top">
+<div class=" info-wrapper">
+  <div class="inner">
+    <div class="image-wrapper">
+      <div class="featured-image">
+        <img src="{{ product.featured_image | image_url: width: 1920x }}" alt="{{ product.title }}" loading="lazy" />
+      </div>
+      <div class="image-selection">
+        {% for image in product.images %}
+        <img src="{{ image.src | image_url: width: 1920 }}" alt="{{ product.title }}" loading="lazy"></p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="product-info">
       <h1 class="product-title">
         {{ product.title }}
       </h1>
       <p class="product-price">
         {{ product.price | money }}
       </p>
+      <div class="stock-status">
+        <h6 class="stock">Availability: </h6>
+        {% if product.available == true %}
+        <p class="in-stock">
+          <i class="fi-xwsuxl-check"></i>
+          In stock
+        </p>
+        {% else %}
+        <p class="out-of-stock">
+          <i class="fi-xnsuxl-times-solid"></i>
+          Out of stock
+        </p>
+        {% endif %}
+      </div>
       <form method="post" action="/cart/add" id="AddToCartForm">
 
         <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
@@ -19,39 +40,22 @@
         <button class="product-add-to-cart-btn" type="submit">Add to cart</button>
 
       </form>
+      <div class="product-description">
+        <h4>
+          Description
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quidem cumque perspiciatis libero, magni
+          atque,
+          ipsum ullam dolor iste explicabo perferendis enim dolores aspernatur, facilis nisi illum ducimus. Sed,
+          veritatis ducimus unde quae adipisci ut architecto delectus, necessitatibus eum porro corporis recusandae
+          non
+          quo maiores distinctio sint ipsa quisquam dolorem voluptatibus officiis deleniti. Natus odit voluptatem est
+          ratione eos nam non esse officiis voluptates deserunt quis laudantium, magnam odio accusamus alias deleniti
+          velit nulla inventore exercitationem cupiditate? Tenetur numquam a dolore sunt eius sint nostrum minima
+          ratione. Eius eveniet minus cumque accusantium expedita quia veritatis, vel quo, eum, consequuntur magnam!
+        </p>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-{% comment %} <h1>{{ product.title }}</h1>
-<p>
-  {{ product.price | money }}
-</p>
-
-<div>
-  {{ product.description }}
-</div> {% endcomment %}
-
-{% comment %} {% form 'product', product %}
-<select name="id">
-  {% for variant in product.variants %}
-  <option value={{ variant.id }}>
-    {{ variant.title }}
-  </option>
-  {% endfor %}
-</select>
-
-<button type="submit">{{ 'General.add_to_cart' | t }}</button>
-{% endform %} {% endcomment %}
-
-{% comment %} <form method="post" action="/cart/add">
-
-  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-
-  <input min="1" type="hidden" id="quantity" name="quantity" value="1" />
-
-  <input type="submit" value="Add to cart" class="btn" />
-
-</form> {% endcomment %}

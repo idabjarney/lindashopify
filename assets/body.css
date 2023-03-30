@@ -1018,6 +1018,74 @@ footer {
             font-size: 12px;
             color: #52524f; }
 
+.info-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  .info-wrapper .inner {
+    display: flex;
+    max-width: 80%; }
+    .info-wrapper .inner .image-wrapper {
+      display: flex;
+      flex-direction: column;
+      min-width: 70%;
+      width: 70%;
+      background-color: red; }
+      .info-wrapper .inner .image-wrapper .featured-image {
+        display: flex;
+        width: 100%; }
+        .info-wrapper .inner .image-wrapper .featured-image img {
+          display: flex;
+          width: 100%; }
+      .info-wrapper .inner .image-wrapper .image-selection {
+        display: flex;
+        width: 100%; }
+        .info-wrapper .inner .image-wrapper .image-selection img {
+          display: flex;
+          width: 230px; }
+    .info-wrapper .inner .product-info {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column; }
+      .info-wrapper .inner .product-info .product-title {
+        font-size: 40px;
+        color: #3F3F3B;
+        margin-bottom: 10px; }
+      .info-wrapper .inner .product-info .product-price {
+        display: flex;
+        font-size: 20px;
+        color: #54544D;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #b3b3a5; }
+      .info-wrapper .inner .product-info .stock-status {
+        display: flex;
+        margin: 10px 0; }
+        .info-wrapper .inner .product-info .stock-status .stock {
+          margin-right: 10px;
+          font-size: 18px;
+          color: #30302d; }
+        .info-wrapper .inner .product-info .stock-status .in-stock i {
+          color: #587021; }
+        .info-wrapper .inner .product-info .stock-status .out-of-stock i {
+          color: #702121; }
+        .info-wrapper .inner .product-info .stock-status p {
+          color: #54544D; }
+      .info-wrapper .inner .product-info form button {
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+        background-color: #363232;
+        border: none;
+        color: #DDD7CE;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px; }
+      .info-wrapper .inner .product-info .product-description h4 {
+        font-size: 18px;
+        color: #30302d;
+        margin-bottom: 10px; }
+
 * {
   margin: 0;
   padding: 0;
