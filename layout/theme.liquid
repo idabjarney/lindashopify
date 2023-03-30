@@ -1,25 +1,27 @@
 <html>
-  <head>
-    {{ content_for_header }}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
-  </head>
-    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> {% endcomment %}
-    <body>
-      <div class="wrapper">
-        {% unless page.handle == "super-secret-title" %}
-          {% render 'header' %}
-        {% endunless %}
-        <main>
-          {{ content_for_layout }}
-        </main>
-        {% render 'footer' %}
-      </div>
-      {{ 'body.css' | asset_url | stylesheet_tag }}</body>
-  </head>
+
+<head>
+  {{ content_for_header }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    {% unless page.handle == "super-secret-title" %}
+    {% render 'header' %}
+    {% endunless %}
+    <main>
+      {{ content_for_layout }}
+    </main>
+    {% render 'footer' %}
+  </div>
+  {{ 'body.css' | asset_url | stylesheet_tag }}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  {% render 'ajaxify-cart' %}
+</body>
+</head>
+
 </html>

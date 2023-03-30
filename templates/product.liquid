@@ -1,20 +1,57 @@
-<h1>{{ product.title }}</h1>
+<div class="cart-wrapper">
+  <div class="image-wrapper">
+    <img src="{{ product.featured_image | image_url: width: 1920x }}" alt="{{ product.title }}" loading="lazy" />
+  </div>
+  <div class="info-wrapper">
+    <div class="info-top">
+      <h1 class="product-title">
+        {{ product.title }}
+      </h1>
+      <p class="product-price">
+        {{ product.price | money }}
+      </p>
+      <form method="post" action="/cart/add" id="AddToCartForm">
+
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+        <input min="1" type="hidden" id="quantity" name="quantity" value="1" />
+
+        <button class="product-add-to-cart-btn" type="submit">Add to cart</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+{% comment %} <h1>{{ product.title }}</h1>
 <p>
   {{ product.price | money }}
 </p>
 
 <div>
   {{ product.description }}
-</div>
+</div> {% endcomment %}
 
-{% form 'product', product %}
-  <select name="id">
-    {% for variant in product.variants %}
-      <option value={{ variant.id }}>
-        {{ variant.title }}
-      </option>
-    {% endfor %}
-  </select>
+{% comment %} {% form 'product', product %}
+<select name="id">
+  {% for variant in product.variants %}
+  <option value={{ variant.id }}>
+    {{ variant.title }}
+  </option>
+  {% endfor %}
+</select>
 
-  <button type="button">{{ 'General.add_to_cart' | t }}</button>
-{% endform %}
+<button type="submit">{{ 'General.add_to_cart' | t }}</button>
+{% endform %} {% endcomment %}
+
+{% comment %} <form method="post" action="/cart/add">
+
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+  <input min="1" type="hidden" id="quantity" name="quantity" value="1" />
+
+  <input type="submit" value="Add to cart" class="btn" />
+
+</form> {% endcomment %}
