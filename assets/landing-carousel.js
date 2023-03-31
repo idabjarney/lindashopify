@@ -9,7 +9,6 @@ backBtn.addEventListener('click', slideBack);
 forwardBtn.addEventListener('click', slideForward);
 
 function slideForward() {
-  console.log('click')
   if (currentSlide === 3) {
     currentSlide = 0;
   } else {

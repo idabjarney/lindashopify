@@ -1,20 +1,86 @@
-<h1>{{ product.title }}</h1>
-<p>
-  {{ product.price | money }}
-</p>
+<div class=" info-wrapper">
+  <div class="inner">
+    <div class="page-location">
+      <a href="/">Home</a>
+      <i class="fi-xnsrxl-double-chevron-solid"></i>
+      <a href="/collections/all/">Collections</a>
+      <i class="fi-xnsrxl-double-chevron-solid"></i>
+      <p>{{ product.title }}</p>
+    </div>
+    <div class="inner-2">
+      <div class="image-wrapper">
+        {% if product.images.size > 1 %}
+        <div class="slide-button-container">
+          <button class="back-button">
+            <i class="fi-xnllxl-double-chevron"></i>
+          </button>
+          <button class="forward-button">
+            <i class="fi-xnlrxl-double-chevron"></i>
+          </button>
+        </div>
+        {% endif %}
+        <div class="featured-image">
+          <img src="{{ product.featured_image | image_url: width: 1920x }}" alt="{{ product.title }}" loading="lazy" />
+        </div>
+        <div class="image-selection">
+          {% for image in product.images %}
+          {% assign custom_classes = '' %}
+          {% if forloop.index == 1 %}
+          {% assign custom_classes = custom_classes | append: 'active' %}
+          {% endif %}
+          <img class="{{ custom_classes  }}" src="{{ image.src | image_url: width: 1920 }}" alt="{{ product.title }}"
+            loading="lazy"></p>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="product-info">
+        <h1 class="product-title">
+          {{ product.title }}
+        </h1>
+        <p class="product-price">
+          {{ product.price | money }}
+        </p>
+        <div class="stock-status">
+          <h6 class="stock">Availability: </h6>
+          {% if product.available == true %}
+          <p class="in-stock">
+            <i class="fi-xwsuxl-check"></i>
+            In stock
+          </p>
+          {% else %}
+          <p class="out-of-stock">
+            <i class="fi-xnsuxl-times-solid"></i>
+            Out of stock
+          </p>
+          {% endif %}
+        </div>
+        <form method="post" action="/cart/add" id="AddToCartForm">
 
-<div>
-  {{ product.description }}
+          <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+          <input min="1" type="hidden" id="quantity" name="quantity" value="1" />
+
+          <button class="product-add-to-cart-btn" type="submit">Add to cart</button>
+
+        </form>
+        <div class="product-description">
+          <h4>
+            Description
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quidem cumque perspiciatis libero, magni
+            atque,
+            ipsum ullam dolor iste explicabo perferendis enim dolores aspernatur, facilis nisi illum ducimus. Sed,
+            veritatis ducimus unde quae adipisci ut architecto delectus, necessitatibus eum porro corporis recusandae
+            non
+            quo maiores distinctio sint ipsa quisquam dolorem voluptatibus officiis deleniti. Natus odit voluptatem est
+            ratione eos nam non esse officiis voluptates deserunt quis laudantium, magnam odio accusamus alias deleniti
+            velit nulla inventore exercitationem cupiditate? Tenetur numquam a dolore sunt eius sint nostrum minima
+            ratione. Eius eveniet minus cumque accusantium expedita quia veritatis, vel quo, eum, consequuntur magnam!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-{% form 'product', product %}
-  <select name="id">
-    {% for variant in product.variants %}
-      <option value={{ variant.id }}>
-        {{ variant.title }}
-      </option>
-    {% endfor %}
-  </select>
-
-  <button type="button">{{ 'General.add_to_cart' | t }}</button>
-{% endform %}
+{{ 'product.js' | asset_url | script_tag }}
